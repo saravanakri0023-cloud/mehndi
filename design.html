@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehndi Designs Gallery | Nasree Mehndi Art</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Nasree mehndi <span> Art</span></a></h2>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="design.html" class="active">Designs</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html">Booking</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-content">
+            <h1>Our Mehndi Designs</h1>
+            <p>Explore an exclusive gallery of handcrafted royal, Arabic, and delicate patterns</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>✦</span> <strong>Designs Gallery</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Designs Gallery Section -->
+    <section class="designs" id="designs">
+        <h2>Curated Collection</h2>
+        <p class="section-text">Filter by style to find the perfect adornment for your special event.</p>
+
+        <div class="filter-buttons">
+            <button class="filter active" data-category="all">All Designs</button>
+            <button class="filter" data-category="bridal">Bridal</button>
+            <button class="filter" data-category="arabic">Arabic</button>
+            <button class="filter" data-category="simple">Simple & Minimal</button>
+        </div>
+
+        <div class="gallery">
+
+            <div class="design-card" data-category="bridal">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi01.jpg" alt="Bridal mehndi art">
+                    <div class="card-overlay"><span>Royal Bridal Art</span></div>
+                </div>
+                <h3>Royal Bridal Mehndi</h3>
+            </div>
+
+            <div class="design-card" data-category="arabic">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi02.webp" alt="Arabic mehndi design">
+                    <div class="card-overlay"><span>Floral Arabic Flow</span></div>
+                </div>
+                <h3>Arabic Floral Motif</h3>
+            </div>
+
+            <div class="design-card" data-category="simple">
+                <div class="card-img-wrapper">
+                    <img src="./assests/luxury_simple_mehndi.jpg" alt="Delicate festive mehndi">
+                    <div class="card-overlay"><span>Delicate Festive</span></div>
+                </div>
+                <h3>Minimal Hand Design</h3>
+            </div>
+
+            <div class="design-card" data-category="bridal">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi03.jpg" alt="Traditional wedding henna">
+                    <div class="card-overlay"><span>Traditional Tapestry</span></div>
+                </div>
+                <h3>Traditional Full Hand</h3>
+            </div>
+
+            <div class="design-card" data-category="arabic">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi06.webp" alt="Elegant shaded Arabic mehndi">
+                    <div class="card-overlay"><span>Shaded Arabic Elegance</span></div>
+                </div>
+                <h3>Shaded Arabic Elegance</h3>
+            </div>
+
+            <div class="design-card" data-category="simple">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi07.jfif" alt="Modern contemporary henna">
+                    <div class="card-overlay"><span>Modern Contemporary</span></div>
+                </div>
+                <h3>Modern Geometric Touch</h3>
+            </div>
+
+            <div class="design-card" data-category="bridal">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi04.webp" alt="Dulhan bridal feet & hands mehndi">
+                    <div class="card-overlay"><span>Dulhan Special</span></div>
+                </div>
+                <h3>Intricate Dulhan Bridal</h3>
+            </div>
+
+            <div class="design-card" data-category="arabic">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi05.webp" alt="Classic gulf style pattern">
+                    <div class="card-overlay"><span>Gulf Style Pattern</span></div>
+                </div>
+                <h3>Classic Gulf Vine</h3>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 55px;">
+            <p class="section-text" style="margin-bottom: 20px;">Found a design you adore or want a customized bridal concept?</p>
+            <a href="booking.html" class="btn">Reserve This Style</a>
+        </div>
+    </section>
+
+    <!-- Services Comparison & Pricing -->
+    <section class="services" id="services">
+        <h2>Available Packages</h2>
+
+        <div class="service-container">
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Bridal Mehndi</h3>
+                <p>Intricate, royal and personalized wedding mehndi designs crafted for your big day.</p>
+                <h4>Starting from ₹1,900</h4>
+                <a href="booking.html" class="service-link">Book Bridal Service &rarr;</a>
+            </div>
+
+            <div class="service-card featured">
+                <div class="service-badge">Most Popular</div>
+                <div class="service-icon">✦</div>
+                <h3>Arabic Mehndi</h3>
+                <p>Flowing floral and geometric Arabic patterns with bold outlines and shaded details.</p>
+                <h4>Starting from ₹799</h4>
+                <a href="booking.html" class="service-link">Book Arabic Service &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Traditional Mehndi</h3>
+                <p>Rich heritage motifs with traditional peacocks, floral vines, and full-hand coverage.</p>
+                <h4>Starting from ₹999</h4>
+                <a href="booking.html" class="service-link">Book Traditional Service &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Elegant Mehndi</h3>
+                <p>Lace gloves, intricate shaded wrist cuffs, and graceful contemporary flow.</p>
+                <h4>Starting from ₹699</h4>
+                <a href="booking.html" class="service-link">Book Elegant Service &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Modern Mehndi</h3>
+                <p>Geometric mandalas, finger bands, and delicate negative space aesthetics.</p>
+                <h4>Starting from ₹499</h4>
+                <a href="booking.html" class="service-link">Book Modern Service &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Simple Mehndi</h3>
+                <p>Minimalist, elegant & graceful designs suited for festivals, parties and casual occasions.</p>
+                <h4>Starting from ₹299</h4>
+                <a href="booking.html" class="service-link">Book Simple Service &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Nasree Mehndi Art</h2>
+        <p>Creating beautiful memories through the timeless touch of henna.</p>
+        <p>Contact: +91 98765 43210 | Email: nasreemehndi@example.com</p>
+        <p>© 2026 Nasree Mehndi Art. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

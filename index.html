@@ -1,0 +1,257 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasree mehndi art | Beautiful Mehndi Designs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Nasree mehndi <span> Art</span></a></h2>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="design.html">Designs</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html">Booking</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: linear-gradient(rgba(20, 10, 8, 0.35), rgba(20, 10, 8, 0.55)), url('./assests/mehndi11.webp');"></div>
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(20, 10, 8, 0.35), rgba(20, 10, 8, 0.55)), url('./assests/mehndi12.webp');"></div>
+    
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(20, 10, 8, 0.35), rgba(20, 10, 8, 0.55)), url('./assests/hero_4k_04.jpg');"></div>
+        </div>
+
+        <div class="hero-content">
+            <p class="subtitle">ART OF TRADITION & BEAUTY</p>
+            <h1>Beautiful Mehndi Designs For Your Special Moments</h1>
+            <p>Making your celebrations more beautiful with elegant
+               and traditional mehndi designs crafted with pure passion.</p>
+
+            <div class="hero-actions">
+                <a href="design.html" class="btn">Explore Designs</a>
+                <a href="booking.html" class="btn btn-outline">Book Now</a>
+            </div>
+        </div>
+
+        <div class="hero-slider-nav">
+            <button class="slider-arrow prev" id="heroPrev" aria-label="Previous Slide">&#10094;</button>
+            <div class="slider-dots" id="heroDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+               
+            </div>
+            <button class="slider-arrow next" id="heroNext" aria-label="Next Slide">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="./assests/mehndi10.jpg"
+                 alt="Luxury bridal celebration mehndi">
+        </div>
+
+        <div class="about-content">
+            <h2>About Our Art</h2>
+            <h3>Tradition in Every Design</h3>
+            <p>
+                Mehndi is not just an art; it is a beautiful tradition
+                that represents happiness, love and celebration.
+                We create unique and elegant designs for every occasion.
+                Elegance in every curve
+            </p>
+            <a href="about.html" class="btn">Read Full Story</a>
+        </div>
+    </section>
+
+    <!-- Designs Section -->
+    <section class="designs" id="designs">
+        <h2>Our Mehndi Designs</h2>
+        <p class="section-text">Explore our beautiful collection.</p>
+
+        <div class="filter-buttons">
+            <button class="filter active" data-category="all">All</button>
+            <button class="filter" data-category="bridal">Bridal</button>
+            <button class="filter" data-category="arabic">Arabic</button>
+            <button class="filter" data-category="simple">Simple</button>
+        </div>
+
+        <div class="gallery">
+
+            <div class="design-card" data-category="bridal">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi01.jpg" alt="Bridal design">
+                    <div class="card-overlay"><span>View Bridal Art</span></div>
+                </div>
+                <h3>Bridal Mehndi</h3>
+            </div>
+
+            <div class="design-card" data-category="arabic">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi02.webp" alt="Arabic design">
+                    <div class="card-overlay"><span>View Arabic Art</span></div>
+                </div>
+                <h3>Arabic Mehndi</h3>
+            </div>
+
+            <div class="design-card" data-category="simple">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi08.jfif" alt="Simple design">
+                    <div class="card-overlay"><span>View Simple Art</span></div>
+                </div>
+                <h3>Simple Mehndi</h3>
+            </div>
+
+            <div class="design-card" data-category="bridal">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi03.jpg" alt="Traditional design">
+                    <div class="card-overlay"><span>View Traditional Art</span></div>
+                </div>
+                <h3>Traditional Mehndi</h3>
+            </div>
+
+            <div class="design-card" data-category="arabic">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi06.webp" alt="Elegant design">
+                    <div class="card-overlay"><span>View Elegant Art</span></div>
+                </div>
+                <h3>Elegant Mehndi</h3>
+            </div>
+
+            <div class="design-card" data-category="simple">
+                <div class="card-img-wrapper">
+                    <img src="./assests/mehndi07.jfif" alt="Modern design">
+                    <div class="card-overlay"><span>View Modern Art</span></div>
+                </div>
+                <h3>Modern Mehndi</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <p class="section-text" style="color: var(--ivory-warm); margin-bottom: 20px;">
+            Hand-crafted with 100% natural, dark-staining organic herbal henna paste.
+        </p>
+
+        <div class="service-container">
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Bridal Mehndi</h3>
+                <p>Intricate, royal and personalized wedding mehndi designs crafted for your big day.</p>
+                <h4>Starting from ₹1,900</h4>
+                <a href="services.html" class="service-link">View Package Details &rarr;</a>
+            </div>
+
+            <div class="service-card featured">
+                <div class="service-badge">Most Popular</div>
+                <div class="service-icon">✦</div>
+                <h3>Arabic Mehndi</h3>
+                <p>Flowing floral and geometric Arabic patterns with bold outlines and shaded details.</p>
+                <h4>Starting from ₹799</h4>
+                <a href="services.html" class="service-link">View Package Details &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Traditional Mehndi</h3>
+                <p>Heritage royal motifs with rich paisleys, florals, and full-hand cultural tapestries.</p>
+                <h4>Starting from ₹999</h4>
+                <a href="services.html" class="service-link">View Package Details &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Elegant Mehndi</h3>
+                <p>Graceful shaded patterns blending lace cuffs, jewelry trails, and delicate vines.</p>
+                <h4>Starting from ₹699</h4>
+                <a href="services.html" class="service-link">View Package Details &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Modern Mehndi</h3>
+                <p>Chic minimalist symmetry, negative space accents, and contemporary geometric aesthetics.</p>
+                <h4>Starting from ₹499</h4>
+                <a href="services.html" class="service-link">View Package Details &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Simple Mehndi</h3>
+                <p>Minimalist & graceful designs suited for festivals, parties and casual occasions.</p>
+                <h4>Starting from ₹299</h4>
+                <a href="services.html" class="service-link">View Package Details &rarr;</a>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px;">
+            <a href="services.html" class="btn">Explore All Services & Packages</a>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <h2>Book Your Appointment</h2>
+        <p>Make your special day more beautiful with Mehndi Magic.</p>
+
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <input type="tel" id="phone" placeholder="Phone Number"
+                   pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+
+            <select id="service" required>
+                <option value="">Select Mehndi Design</option>
+                <option>Bridal Mehndi (Starting from ₹1,900)</option>
+                <option>Arabic Mehndi (Starting from ₹799)</option>
+                <option>Traditional Mehndi (Starting from ₹999)</option>
+                <option>Elegant Mehndi (Starting from ₹699)</option>
+                <option>Modern Mehndi (Starting from ₹499)</option>
+                <option>Simple Mehndi (Starting from ₹299)</option>
+            </select>
+
+            <input type="date" id="date" required>
+
+            <textarea id="message" placeholder="Additional Message"></textarea>
+
+            <button type="submit" class="btn">Submit Booking</button>
+        </form>
+
+        <p id="successMessage"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Nasree mehndi art</h2>
+        <p>Creating beautiful memories through art.</p>
+        <p>Contact: +91 9894818177</p>
+        <p>© 2026 Nasree mehndi artS. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

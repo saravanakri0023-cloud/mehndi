@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book An Appointment | Nasree Mehndi Art</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Nasree mehndi <span> Art</span></a></h2>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="design.html">Designs</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html" class="active">Booking</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-content">
+            <h1>Book Your Appointment</h1>
+            <p>Reserve your date early to secure uninterrupted bridal attention and artistry</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>✦</span> <strong>Appointment Booking</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Content Section -->
+    <section class="booking" id="booking">
+        <h2>Schedule Your Session</h2>
+        <p class="section-text">Fill in the details below and we will confirm your date within 24 hours.</p>
+
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Your Full Name" required>
+
+            <input type="email" id="email" placeholder="Your Email Address" required>
+
+            <input type="tel" id="phone" placeholder="Phone Number (10 Digits)"
+                   pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+
+            <select id="service" required>
+                <option value="">Select Mehndi Package / Style</option>
+                <option value="Bridal Mehndi (Starting from ₹1,900)">Bridal Mehndi (Starting from ₹1,900)</option>
+                <option value="Arabic Mehndi (Starting from ₹799)">Arabic Mehndi (Starting from ₹799)</option>
+                <option value="Traditional Mehndi (Starting from ₹999)">Traditional Mehndi (Starting from ₹999)</option>
+                <option value="Elegant Mehndi (Starting from ₹699)">Elegant Mehndi (Starting from ₹699)</option>
+                <option value="Modern Mehndi (Starting from ₹499)">Modern Mehndi (Starting from ₹499)</option>
+                <option value="Simple Mehndi (Starting from ₹299)">Simple Mehndi (Starting from ₹299)</option>
+                <option value="Custom Group / Family Package">Custom Group / Family Package</option>
+            </select>
+
+            <input type="date" id="date" required>
+
+            <textarea id="message" placeholder="Event Details: Location, number of guests, preferred time, or design requests"></textarea>
+
+            <button type="submit" class="btn">Submit Booking Request</button>
+        </form>
+
+        <p id="successMessage"></p>
+    </section>
+
+    <!-- Booking Information & FAQs -->
+    <section class="services" style="padding-top: 60px;">
+        <h2>Booking & Preparation Guidelines</h2>
+
+        <div class="service-container">
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Advance Notice</h3>
+                <p>Bridal appointments fill quickly during wedding seasons. We recommend reserving at least 2–4 weeks in advance.</p>
+                <h4>Flexible Rescheduling</h4>
+            </div>
+
+            <div class="service-card featured">
+                <div class="service-badge">Crucial Tip</div>
+                <div class="service-icon">✦</div>
+                <h3>Dark Stain Care</h3>
+                <p>We provide eucalyptus sealing spray, lemon-sugar sealant, and after-care instructions for optimum deep stain results.</p>
+                <h4>Complimentary Kit</h4>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Venue Inquiries</h3>
+                <p>We travel to homes, wedding banquet halls, resorts, and destination venues across the city.</p>
+                <h4>On-Site Service</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Nasree Mehndi Art</h2>
+        <p>Creating beautiful memories through the timeless touch of henna.</p>
+        <p>Contact: +91 98765 43210 | Email: nasreemehndi@example.com</p>
+        <p>© 2026 Nasree Mehndi Art. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
