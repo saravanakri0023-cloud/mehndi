@@ -35,6 +35,62 @@ window.addEventListener("scroll", handleNavbarScroll, { passive: true });
 handleNavbarScroll();
 
 // ==========================================================
+// APPLE-STYLE SMOOTH SCROLL (MOMENTUM & INERTIAL GLIDE)
+// ==========================================================
+let lenis = null;
+
+if (typeof Lenis !== "undefined") {
+    lenis = new Lenis({
+        duration: 1.25, // Apple-style gentle momentum glide duration
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Apple exponential glide curve
+        direction: "vertical",
+        gestureDirection: "vertical",
+        smooth: true,
+        mouseMultiplier: 1.0,
+        smoothTouch: false, // Preserves native Apple iOS touch momentum on mobile
+        touchMultiplier: 2.0,
+        infinite: false,
+    });
+
+    // RequestAnimationFrame update loop
+    function raf(time) {
+        if (lenis) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+    }
+    requestAnimationFrame(raf);
+
+    // Sync navbar scroll state on each smooth frame
+    lenis.on("scroll", () => {
+        handleNavbarScroll();
+    });
+}
+
+// Smooth scroll for internal anchor links (with capsule navbar offset)
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href");
+        if (targetId && targetId !== "#") {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                e.preventDefault();
+                if (lenis) {
+                    lenis.scrollTo(targetEl, {
+                        offset: -80,
+                        duration: 1.4,
+                        easing: (t) => 1 - Math.pow(1 - t, 4),
+                    });
+                } else {
+                    const y = targetEl.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                }
+            }
+        }
+    });
+});
+
+// ==========================================================
 // HERO BACKGROUND IMAGE SLIDESHOW ANIMATION
 // ==========================================================
 const heroSlides = document.querySelectorAll(".hero-slide");
@@ -44,7 +100,7 @@ const nextBtn = document.getElementById("heroNext");
 
 let currentSlideIndex = 0;
 let slideInterval = null;
-const SLIDE_DURATION = 5000; // 5 seconds per slide
+const SLIDE_DURATION = 3000; // 5 seconds per slide
 
 function showSlide(index) {
     if (!heroSlides.length) return;

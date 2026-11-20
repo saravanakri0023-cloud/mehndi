@@ -17,6 +17,7 @@
     --henna-warm: #4d2a1e;
     --henna-terracotta: #7a3e2b;
     --henna-rose: #5c1e28; /* Subtle touch of burgundy without overwhelming */
+    --henna-deep: #3a0c1c; /* Deep Royal Henna Burgundy */
 
     /* Typography Colors */
     --text-primary: #2a1610;
@@ -49,7 +50,62 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ==========================================================
+   APPLE SMOOTH SCROLL (LENIS MOMENTUM PHYSICS)
+   ========================================================== */
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
+/* Apple-style Sleek Minimal Floating Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(122, 62, 43, 0.28);
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(122, 62, 43, 0.55);
+    background-clip: padding-box;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(122, 62, 43, 0.35) transparent;
 }
 
 body {
@@ -126,9 +182,26 @@ header {
 }
 
 .logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     text-decoration: none;
     color: inherit;
     transition: var(--transition-smooth);
+}
+
+.nav-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0 2px 8px rgba(197, 155, 72, 0.45));
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
+}
+
+.logo a:hover .nav-logo-img {
+    transform: scale(1.08) rotate(4deg);
+    filter: drop-shadow(0 4px 14px rgba(223, 185, 105, 0.7));
 }
 
 .logo a:hover {
@@ -217,6 +290,14 @@ header.scrolled .logo {
     color: var(--text-primary);
 }
 
+header.scrolled .nav-logo-img {
+    filter: drop-shadow(0 2px 6px rgba(45, 25, 18, 0.25));
+}
+
+header.scrolled .logo a:hover .nav-logo-img {
+    filter: drop-shadow(0 4px 12px rgba(197, 155, 72, 0.55));
+}
+
 header.scrolled .logo span {
     color: var(--gold-dark);
     text-shadow: none;
@@ -240,10 +321,18 @@ header.scrolled .nav-links a:hover {
 
 header.scrolled .nav-links a.active {
     color: #ffffff;
-    background: linear-gradient(135deg, var(--henna-deep), #61132f);
+    background: #3a0c1c;
+    background: linear-gradient(135deg, var(--henna-deep, #3a0c1c), #61132f);
     border: 1px solid var(--gold-primary);
     box-shadow: 0 4px 14px rgba(58, 12, 28, 0.35);
     font-weight: 600;
+}
+
+header.scrolled .nav-links a.active:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #4d1025, #75183a);
+    border-color: var(--gold-light);
+    box-shadow: 0 6px 18px rgba(58, 12, 28, 0.45);
 }
 
 header.scrolled .menu-btn {
@@ -780,6 +869,21 @@ section h2::after {
     background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
 }
 
+.pricing-note {
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    color: var(--gold-shimmer);
+    letter-spacing: 0.8px;
+    margin: 4px auto 25px;
+    display: inline-block;
+    padding: 8px 24px;
+    background: rgba(197, 155, 72, 0.14);
+    border: 1px solid rgba(223, 185, 105, 0.45);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* ==========================================================
    SERVICES & WHY-CHOOSE-US CARDS - ROYAL BURGUNDY WITH GOLD ACCENTS
    ========================================================== */
@@ -986,6 +1090,21 @@ footer {
     border-top: 2px solid var(--gold-primary);
 }
 
+.footer-logo {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 4px 16px rgba(197, 155, 72, 0.45));
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.08) rotate(4deg);
+    filter: drop-shadow(0 6px 24px rgba(223, 185, 105, 0.7));
+}
+
 footer h2 {
     color: var(--gold-shimmer);
     font-size: 26px;
@@ -1052,6 +1171,15 @@ footer p {
     .logo {
         font-size: 18px;
         letter-spacing: 1.2px;
+    }
+
+    .logo a {
+        gap: 9px;
+    }
+
+    .nav-logo-img {
+        width: 36px;
+        height: 36px;
     }
 
     .menu-btn {
@@ -1148,6 +1276,15 @@ footer p {
     .logo {
         font-size: 15px;
         letter-spacing: 0.8px;
+    }
+
+    .logo a {
+        gap: 7px;
+    }
+
+    .nav-logo-img {
+        width: 30px;
+        height: 30px;
     }
 
     .menu-btn {
